@@ -27,3 +27,35 @@ export async function addSpending(category, description, amount) {
   });
   totalList();
 }
+
+//지출 수정
+export async function crystalSpending(id, category, description, amount) {
+  await fetch(`${BASIC_URL}/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: json.stringify({
+      category: `${category}`,
+      description: `${description}`,
+      amount: `${amount}`,
+    }),
+  });
+  totalList();
+}
+
+//지출 삭제
+export async function crystalSpending(id, category, description, amount) {
+  await fetch(`${BASIC_URL}/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: json.stringify({
+      category: `${category}`,
+      description: `${description}`,
+      amount: `${amount}`,
+    }),
+  });
+  totalList();
+}
