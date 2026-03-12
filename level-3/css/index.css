@@ -1,0 +1,138 @@
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.header-container {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo {
+  padding: 20px;
+  font-weight: 4500;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.add-section {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border: 5px solid #9bd1e5;
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+  height: 450px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 550;
+  font-size: 25px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subtitle {
+  font-weight: 550;
+}
+
+.select {
+  border: none;
+  border: 2px solid #9bd1e5;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.select:focus {
+  outline: 2px solid #6a8eae;
+}
+
+.add-input {
+  border: none;
+  border: 2px solid #9bd1e5;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-input:focus {
+  outline: 2px solid #6a8eae;
+}
+
+.add-button {
+  border: none;
+  background-color: transparent;
+  background-color: #9bd1e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  font-weight: 550;
+  font-size: 17px;
+}
+.add-button:focus {
+  background-color: #6a8eae;
+}
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border: 5px solid #9bd1e5;
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+  height: 450px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #6a8eae;
+}
+
+.footer-container {
+  background-color: #6a8eae;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  color: white;
+  padding: 100px 0px 20px 0px;
+}

@@ -8,7 +8,7 @@ export async function totalList() {
       method: "GET",
     });
     const list = await response.json();
-    console.log(list);
+    return list;
   } catch (error) {
     console.log(error);
   }

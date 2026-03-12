@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
-  <body>
-    <!-- 지출 목록 렌더링 -->
-    <script type="module" src="js/render/list.js"></script>
+  <body class="body-container">
+    <header class="header-container">
+      <h1 class="header-logo">Spending</h1>
+    </header>
+    <main class="main-container">
+      <section class="add-section">
+        <div class="title-container"><p class="title">지출</p></div>
+        <div class="category">
+          <p class="subtitle">카테고리</p>
+          <select class="select">
+            <option>생활</option>
+            <option>이동</option>
+            <option>생활비</option>
+            <option>소비</option>
+            <option>개인</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="category">
+          <p class="subtitle">설명</p>
+          <input class="add-input" placeholder="추가할 항목을 입력해주세요" />
+        </div>
+        <div class="category">
+          <p class="subtitle">비용</p>
+          <input class="add-input" placeholder="추가할 항목을 입력해주세요" />
+        </div>
+        <button class="add-button">추가</button>
+      </section>
+      <section class="list-section">
+        <div class="title-container"><p class="title">목록</p></div>
+        <ul class="spending-list"></ul>
+      </section>
+    </main>
+    <footer class="footer-container">
+      <p class="copyright">ⓒ 2026 FS-sprint (12기) All rights reserved</p>
+    </footer>
+    <script type="module" src="./js/render/list.js"></script>
   </body>
 </html>
