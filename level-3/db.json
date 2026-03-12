@@ -6,6 +6,34 @@
       "category": "식비",
       "description": "점심 식사",
       "amount": 12000
+    },
+    {
+      "id": 2,
+      "date": "2024-03-01",
+      "category": "식비",
+      "description": "점심 식사",
+      "amount": 12000
+    },
+    {
+      "id": 3,
+      "date": "2024-03-01",
+      "category": "식비",
+      "description": "점심 식사",
+      "amount": 12000
+    },
+    {
+      "id": 4,
+      "date": "2024-03-01",
+      "category": "식비",
+      "description": "점심 식사",
+      "amount": 12000
+    },
+    {
+      "id": 5,
+      "date": "2024-03-01",
+      "category": "식비",
+      "description": "점심 식사",
+      "amount": 12000
     }
   ]
 }
