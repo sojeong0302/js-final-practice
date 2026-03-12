@@ -3,59 +3,75 @@ const NEXT_ID = 1;
 
 //전체 지출 조회
 export async function totalList() {
-  const response = await fetch(`${BASIC_URL}`, {
-    method: "GET",
-  });
-  const list = await response.json();
-  console.log(list);
+  try {
+    const response = await fetch(`${BASIC_URL}`, {
+      method: "GET",
+    });
+    const list = await response.json();
+    console.log(list);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 //지출 추가
 export async function addSpending(category, description, amount) {
-  await fetch(`${BASIC_URL}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: json.stringify({
-      id: `${NEXT_ID++}`,
-      date: new Date(),
-      category: `${category}`,
-      description: `${description}`,
-      amount: `${amount}`,
-    }),
-  });
-  totalList();
+  try {
+    await fetch(`${BASIC_URL}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: json.stringify({
+        id: `${NEXT_ID++}`,
+        date: new Date(),
+        category: `${category}`,
+        description: `${description}`,
+        amount: `${amount}`,
+      }),
+    });
+    totalList();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 //지출 수정
 export async function crystalSpending(id, category, description, amount) {
-  await fetch(`${BASIC_URL}/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: json.stringify({
-      category: `${category}`,
-      description: `${description}`,
-      amount: `${amount}`,
-    }),
-  });
-  totalList();
+  try {
+    await fetch(`${BASIC_URL}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: json.stringify({
+        category: `${category}`,
+        description: `${description}`,
+        amount: `${amount}`,
+      }),
+    });
+    totalList();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 //지출 삭제
-export async function crystalSpending(id, category, description, amount) {
-  await fetch(`${BASIC_URL}/${id}`, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: json.stringify({
-      category: `${category}`,
-      description: `${description}`,
-      amount: `${amount}`,
-    }),
-  });
-  totalList();
+export async function deleteSpending(id, category, description, amount) {
+  try {
+    await fetch(`${BASIC_URL}/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: json.stringify({
+        category: `${category}`,
+        description: `${description}`,
+        amount: `${amount}`,
+      }),
+    });
+    totalList();
+  } catch (error) {
+    console.log(error);
+  }
 }
