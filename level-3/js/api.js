@@ -55,22 +55,15 @@ export async function crystalSpending(id, category, description, amount) {
     console.log(error);
   }
 }
-
 //지출 삭제
-export async function deleteSpending(id, category, description, amount) {
+export async function deleteSpending(id) {
   try {
     await fetch(`${BASIC_URL}/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-      body: json.stringify({
-        category: `${category}`,
-        description: `${description}`,
-        amount: `${amount}`,
-      }),
     });
-    totalList();
   } catch (error) {
     console.log(error);
   }

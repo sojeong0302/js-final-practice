@@ -1,4 +1,4 @@
-import { totalList } from "../api.js";
+import { totalList, deleteSpending } from "../api.js";
 
 const spendingList = document.querySelector(".spending-list");
 
@@ -28,6 +28,9 @@ export function rendering(totalList) {
 
     const btnDelete = document.createElement("button");
     btnDelete.textContent = "삭제";
+    btnDelete.addEventListener("click", function () {
+      deleteList(t.id);
+    });
 
     listItem.appendChild(category);
     listItem.appendChild(description);
@@ -43,6 +46,10 @@ export function rendering(totalList) {
 export async function getList() {
   const list = await totalList();
   rendering(list);
+}
+
+export async function deleteList(id) {
+  deleteSpending(id);
 }
 
 getList();
