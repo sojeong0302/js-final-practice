@@ -1,18 +1,18 @@
 {
   "expenses": [
     {
-      "id": 2,
-      "date": "2024-03-01",
-      "category": "식비",
-      "description": "점심 식사",
-      "amount": 12000
+      "id": 1,
+      "date": "2026-03-13T01:24:04.658Z",
+      "category": "생활",
+      "description": "바보",
+      "amount": 1234
     },
     {
-      "id": 5,
-      "date": "2024-03-01",
-      "category": "식비",
-      "description": "점심 식사",
-      "amount": 12000
+      "id": 2,
+      "date": "2026-03-13T01:24:15.443Z",
+      "category": "생활",
+      "description": "멍청이",
+      "amount": 456
     }
   ]
 }

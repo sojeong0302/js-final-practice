@@ -1,8 +1,12 @@
-import { totalList, deleteSpending } from "../api.js";
+import { totalList, deleteSpending, addSpending } from "../api.js";
 
 const spendingList = document.querySelector(".spending-list");
+const addSection = document.querySelector(".add-section");
+const categorySelect = document.querySelector("#select");
+const desInput = document.querySelector("#des_input");
+const amountInput = document.querySelector("#amount_input");
 
-export function rendering(totalList) {
+export function listRendering(totalList) {
   spendingList.innerHTML = "";
   totalList.forEach(function (t) {
     const listItem = document.createElement("li");
@@ -45,11 +49,30 @@ export function rendering(totalList) {
 
 export async function getList() {
   const list = await totalList();
-  rendering(list);
+  listRendering(list);
 }
 
 export async function deleteList(id) {
   deleteSpending(id);
 }
+
+export async function addList(category, description, amount) {
+  // console.log(`받은 값: ${category}, ${description}, ${amount}`);
+
+  addSpending(category, description, amount);
+}
+
+//추가 이벤트
+addSection.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const category = categorySelect.value;
+  const description = desInput.value.trim();
+  const amount = amountInput.value.trim();
+
+  addList(category, description, amount);
+
+  desInput.value = "";
+  amountInput.value = "";
+});
 
 getList();

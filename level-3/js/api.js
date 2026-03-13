@@ -1,5 +1,5 @@
 const BASIC_URL = "http://localhost:4000/expenses";
-const NEXT_ID = 1;
+let next_id = 1;
 
 //전체 지출 조회
 export async function totalList() {
@@ -17,18 +17,19 @@ export async function totalList() {
 //지출 추가
 export async function addSpending(category, description, amount) {
   try {
+    let newSpending = {
+      date: new Date(),
+      category: `${category}`,
+      description: `${description}`,
+      amount: Number(`${amount}`),
+    };
+    console.log(newSpending);
     await fetch(`${BASIC_URL}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: json.stringify({
-        id: `${NEXT_ID++}`,
-        date: new Date(),
-        category: `${category}`,
-        description: `${description}`,
-        amount: `${amount}`,
-      }),
+      body: JSON.stringify(newSpending),
     });
     totalList();
   } catch (error) {
@@ -44,7 +45,7 @@ export async function crystalSpending(id, category, description, amount) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: json.stringify({
+      body: JSON.stringify({
         category: `${category}`,
         description: `${description}`,
         amount: `${amount}`,
