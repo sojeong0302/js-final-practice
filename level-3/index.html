@@ -16,7 +16,7 @@
         <div class="title-container"><p class="title">지출</p></div>
         <div class="category">
           <p class="subtitle">카테고리</p>
-          <select class="select" id="select">
+          <select class="select" id="add_select">
             <option id="life">생활</option>
             <option id="move">이동</option>
             <option id="livingExpenses">생활비</option>
@@ -45,6 +45,15 @@
       </form>
       <section class="list-section">
         <div class="title-container"><p class="title">목록</p></div>
+        <select class="select" id="filter_select">
+          <option id="all">전체</option>
+          <option id="life">생활</option>
+          <option id="move">이동</option>
+          <option id="livingExpenses">생활비</option>
+          <option id="consumption">소비</option>
+          <option id="individual">개인</option>
+          <option id="etc">기타</option>
+        </select>
         <ul class="spending-list"></ul>
       </section>
     </main>

@@ -13,6 +13,13 @@
       "category": "생활",
       "description": "멍청이",
       "amount": 456
+    },
+    {
+      "date": "2026-03-13T02:04:12.671Z",
+      "category": "개인",
+      "description": "영화",
+      "amount": 17000,
+      "id": 3
     }
   ]
 }

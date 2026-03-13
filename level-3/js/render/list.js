@@ -2,13 +2,14 @@ import { totalList, deleteSpending, addSpending } from "../api.js";
 
 const spendingList = document.querySelector(".spending-list");
 const addSection = document.querySelector(".add-section");
-const categorySelect = document.querySelector("#select");
+const categorySelect = document.querySelector("#add_select");
 const desInput = document.querySelector("#des_input");
 const amountInput = document.querySelector("#amount_input");
+const filterSelect = document.querySelector("#filter_select");
 
-export function listRendering(totalList) {
+export function listRendering(list) {
   spendingList.innerHTML = "";
-  totalList.forEach(function (t) {
+  list.forEach(function (t) {
     const listItem = document.createElement("li");
     listItem.className = "list-item";
 
@@ -44,6 +45,11 @@ export function listRendering(totalList) {
     listItem.appendChild(btnDelete);
 
     spendingList.appendChild(listItem);
+
+    // const a = list.filter(function (t) {
+    //   return t.category === filterSelect.value;
+    // });
+    // listRendering(a);
   });
 }
 
@@ -73,6 +79,16 @@ addSection.addEventListener("submit", function (e) {
 
   desInput.value = "";
   amountInput.value = "";
+});
+
+// 카테고리 필터링
+filterSelect.addEventListener("change", async function () {
+  const list = await totalList();
+
+  const filterList = list.filter(function (t) {
+    return t.category === filterSelect.value;
+  });
+  listRendering(filterList);
 });
 
 getList();
