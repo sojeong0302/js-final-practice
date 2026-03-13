@@ -25,14 +25,16 @@ export function statsendering(list) {
   const categorySpendingTitle = document.createElement("p");
   categorySpendingTitle.textContent = "카테고리별 합계";
   categorySpendingTitle.className = "stats-subtitle";
-  const categoryArray = {};
 
-  list.forEach(function (item) {
-    if (!categoryArray[item.category]) {
-      categoryArray[item.category] = 0;
+  const categoryArray = list.reduce(function (acc, item) {
+    if (!acc[item.category]) {
+      acc[item.category] = 0;
     }
-    categoryArray[item.category] += item.amount;
-  });
+
+    acc[item.category] += item.amount;
+
+    return acc;
+  }, {});
 
   categorySpending.appendChild(categorySpendingTitle);
 

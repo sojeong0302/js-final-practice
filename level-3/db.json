@@ -1,25 +1,18 @@
 {
   "expenses": [
     {
-      "date": "2026-03-13T04:35:46.433Z",
+      "date": "2026-03-13T09:24:08.534Z",
       "category": "생활",
-      "description": "가나다라",
-      "amount": "4343888888",
-      "id": 5
-    },
-    {
-      "date": "2026-03-13T06:34:03.016Z",
-      "category": "생활",
-      "description": "미쯔",
-      "amount": "700",
-      "id": 6
-    },
-    {
-      "date": "2026-03-13T07:15:33.523Z",
-      "category": "이동",
       "description": "버스비",
-      "amount": "54352",
-      "id": 7
+      "amount": 4000,
+      "id": 1
+    },
+    {
+      "date": "2026-03-13T09:24:18.938Z",
+      "category": "소비",
+      "description": "초콜릿",
+      "amount": 1000,
+      "id": 2
     }
   ]
 }

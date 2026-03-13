@@ -105,7 +105,7 @@ export async function deleteList(id) {
 }
 
 export async function addList(category, description, amount) {
-  addSpending(category, description, amount);
+  addSpending(category, description, Number(amount));
 }
 
 //추가 이벤트
