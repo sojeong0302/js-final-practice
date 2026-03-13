@@ -1,3 +1,5 @@
+import { showMessage } from "./utils";
+
 const BASIC_URL = "http://localhost:4000/expenses";
 
 //전체 지출 조회
@@ -7,9 +9,10 @@ export async function totalList() {
       method: "GET",
     });
     const list = await response.json();
+    showMessage("success", "성공!");
     return list;
   } catch (error) {
-    console.log(error);
+    showMessage("error", "실패!");
   }
 }
 
@@ -31,8 +34,9 @@ export async function addSpending(category, description, amount) {
       body: JSON.stringify(newSpending),
     });
     totalList();
+    showMessage("success", "성공!");
   } catch (error) {
-    console.log(error);
+    showMessage("error", "실패!");
   }
 }
 
@@ -51,8 +55,9 @@ export async function crystalSpending(id, category, description, amount) {
       }),
     });
     totalList();
+    showMessage("success", "성공!");
   } catch (error) {
-    console.log(error);
+    showMessage("error", "실패!");
   }
 }
 //지출 삭제
@@ -64,7 +69,8 @@ export async function deleteSpending(id) {
         "Content-Type": "application/json",
       },
     });
+    showMessage("success", "성공!");
   } catch (error) {
-    console.log(error);
+    showMessage("error", "실패!");
   }
 }
