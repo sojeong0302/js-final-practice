@@ -135,12 +135,12 @@ filterSelect.addEventListener("change", async function () {
 amountSort.addEventListener("change", async function () {
   const list = await totalList();
   if (amountSort.value === "ascending") {
-    const sortList = list.sort((a, b) => a.amount - b.amount);
+    const sortList = [...list].sort((a, b) => a.amount - b.amount);
     listRendering(sortList);
   }
 
   if (amountSort.value === "descending") {
-    const sortList = list.sort((a, b) => b.amount - a.amount);
+    const sortList = [...list].sort((a, b) => b.amount - a.amount);
     listRendering(sortList);
   }
 });
@@ -149,12 +149,12 @@ amountSort.addEventListener("change", async function () {
 datesSort.addEventListener("change", async function () {
   const list = await totalList();
   if (datesSort.value === "upToDate") {
-    const sortList = list.sort((a, b) => a.amount - b.amount);
+    const sortList = [...list].sort((a, b) => a.amount - b.amount);
     listRendering(sortList);
   }
 
   if (datesSort.value === "downToDate") {
-    const sortList = list.sort((a, b) => b.amount - a.amount);
+    const sortList = [...list].sort((a, b) => b.amount - a.amount);
     listRendering(sortList);
   }
 });
