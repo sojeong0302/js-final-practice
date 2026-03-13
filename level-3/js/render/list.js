@@ -1,4 +1,9 @@
-import { totalList, deleteSpending, addSpending } from "../api.js";
+import {
+  totalList,
+  deleteSpending,
+  addSpending,
+  crystalSpending,
+} from "../api.js";
 
 const spendingList = document.querySelector(".spending-list");
 const addSection = document.querySelector(".add-section");
@@ -32,19 +37,59 @@ export function listRendering(list) {
 
     const btnCrystal = document.createElement("button");
     btnCrystal.textContent = "수정";
+    let categorySelect;
+    let descriptionInput;
+    let amountInput;
+    btnCrystal.addEventListener("click", function () {
+      if (btnCrystal.textContent === "수정") {
+        btnCrystal.textContent = "저장";
+
+        //카테고리 수정
+        categorySelect = document.createElement("select");
+        const categories = ["생활", "이동", "소비", "개인"];
+
+        categories.forEach(function (c) {
+          const option = document.createElement("option");
+          option.value = c;
+          option.textContent = c;
+
+          categorySelect.appendChild(option);
+        });
+
+        categorySelect.value = category.textContent;
+        category.replaceWith(categorySelect);
+
+        //설명 수정
+        descriptionInput = document.createElement("input");
+        descriptionInput.value = description.textContent;
+        description.replaceWith(descriptionInput);
+
+        //가격 수정
+        amountInput = document.createElement("input");
+        amountInput.value = amount.textContent;
+        amount.replaceWith(amountInput);
+      } else {
+        crystalSpending(
+          t.id,
+          categorySelect.value,
+          descriptionInput.value,
+          amountInput.value,
+        );
+      }
+    });
 
     const btnDelete = document.createElement("button");
     btnDelete.textContent = "삭제";
     btnDelete.addEventListener("click", function () {
       deleteList(t.id);
     });
+    button.appendChild(btnCrystal);
+    button.appendChild(btnDelete);
 
     listItem.appendChild(category);
     listItem.appendChild(description);
     listItem.appendChild(amount);
     listItem.appendChild(button);
-    listItem.appendChild(btnCrystal);
-    listItem.appendChild(btnDelete);
 
     spendingList.appendChild(listItem);
   });

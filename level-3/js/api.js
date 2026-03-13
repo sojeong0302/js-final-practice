@@ -1,5 +1,4 @@
 const BASIC_URL = "http://localhost:4000/expenses";
-let next_id = 1;
 
 //전체 지출 조회
 export async function totalList() {

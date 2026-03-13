@@ -1,45 +1,24 @@
 {
   "expenses": [
     {
-      "id": 2,
-      "date": "2026-03-13T01:24:15.443Z",
-      "category": "생활",
-      "description": "멍청이",
-      "amount": 456
-    },
-    {
-      "date": "2026-03-13T02:04:12.671Z",
-      "category": "개인",
-      "description": "영화",
-      "amount": 17000,
-      "id": 3
-    },
-    {
-      "date": "2026-03-13T04:32:46.446Z",
-      "category": "생활",
-      "description": "",
-      "amount": 0,
-      "id": 4
-    },
-    {
       "date": "2026-03-13T04:35:46.433Z",
       "category": "생활",
-      "description": "가나다",
-      "amount": 4343,
+      "description": "가나다라",
+      "amount": "4343888888",
       "id": 5
     },
     {
       "date": "2026-03-13T06:34:03.016Z",
       "category": "생활",
       "description": "미쯔",
-      "amount": 700,
+      "amount": "700",
       "id": 6
     },
     {
       "date": "2026-03-13T07:15:33.523Z",
       "category": "이동",
       "description": "버스비",
-      "amount": 54352,
+      "amount": "54352",
       "id": 7
     }
   ]
