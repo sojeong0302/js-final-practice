@@ -6,6 +6,8 @@ const categorySelect = document.querySelector("#add_select");
 const desInput = document.querySelector("#des_input");
 const amountInput = document.querySelector("#amount_input");
 const filterSelect = document.querySelector("#filter_select");
+const amountSort = document.querySelector("#amount_select");
+const datesSort = document.querySelector("#date_select");
 
 export function listRendering(list) {
   spendingList.innerHTML = "";
@@ -45,11 +47,6 @@ export function listRendering(list) {
     listItem.appendChild(btnDelete);
 
     spendingList.appendChild(listItem);
-
-    // const a = list.filter(function (t) {
-    //   return t.category === filterSelect.value;
-    // });
-    // listRendering(a);
   });
 }
 
@@ -63,8 +60,6 @@ export async function deleteList(id) {
 }
 
 export async function addList(category, description, amount) {
-  // console.log(`받은 값: ${category}, ${description}, ${amount}`);
-
   addSpending(category, description, amount);
 }
 
@@ -89,6 +84,34 @@ filterSelect.addEventListener("change", async function () {
     return t.category === filterSelect.value;
   });
   listRendering(filterList);
+});
+
+//금액순 정렬
+amountSort.addEventListener("change", async function () {
+  const list = await totalList();
+  if (amountSort.value === "ascending") {
+    const sortList = list.sort((a, b) => a.amount - b.amount);
+    listRendering(sortList);
+  }
+
+  if (amountSort.value === "descending") {
+    const sortList = list.sort((a, b) => b.amount - a.amount);
+    listRendering(sortList);
+  }
+});
+
+//날짜순 정렬
+datesSort.addEventListener("change", async function () {
+  const list = await totalList();
+  if (datesSort.value === "upToDate") {
+    const sortList = list.sort((a, b) => a.amount - b.amount);
+    listRendering(sortList);
+  }
+
+  if (datesSort.value === "downToDate") {
+    const sortList = list.sort((a, b) => b.amount - a.amount);
+    listRendering(sortList);
+  }
 });
 
 getList();

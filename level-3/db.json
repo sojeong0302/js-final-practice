@@ -1,13 +1,6 @@
 {
   "expenses": [
     {
-      "id": 1,
-      "date": "2026-03-13T01:24:04.658Z",
-      "category": "생활",
-      "description": "바보",
-      "amount": 1234
-    },
-    {
       "id": 2,
       "date": "2026-03-13T01:24:15.443Z",
       "category": "생활",
@@ -20,6 +13,20 @@
       "description": "영화",
       "amount": 17000,
       "id": 3
+    },
+    {
+      "date": "2026-03-13T04:32:46.446Z",
+      "category": "생활",
+      "description": "",
+      "amount": 0,
+      "id": 4
+    },
+    {
+      "date": "2026-03-13T04:35:46.433Z",
+      "category": "생활",
+      "description": "가나다",
+      "amount": 4343,
+      "id": 5
     }
   ]
 }

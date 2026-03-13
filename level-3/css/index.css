@@ -1,3 +1,9 @@
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .body-container {
   display: flex;
   flex-direction: column;
@@ -90,11 +96,8 @@
 }
 
 .add-button {
-  border: none;
-  background-color: transparent;
   background-color: #9bd1e5;
   color: white;
-  cursor: pointer;
   border-radius: 5px;
   padding: 5px 15px 5px 15px;
   font-weight: 550;
@@ -123,6 +126,22 @@
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid #6a8eae;
+}
+
+/* .badges {
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #9bd1e5;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+} */
+
+.badge:focus {
+  background-color: #6a8eae;
 }
 
 .footer-container {

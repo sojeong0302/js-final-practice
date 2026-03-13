@@ -46,13 +46,23 @@
       <section class="list-section">
         <div class="title-container"><p class="title">목록</p></div>
         <select class="select" id="filter_select">
-          <option id="all">전체</option>
-          <option id="life">생활</option>
-          <option id="move">이동</option>
-          <option id="livingExpenses">생활비</option>
-          <option id="consumption">소비</option>
-          <option id="individual">개인</option>
-          <option id="etc">기타</option>
+          <option>카테고리 선택</option>
+          <option value="생활">생활</option>
+          <option value="이동">이동</option>
+          <option value="생활비">생활비</option>
+          <option value="소비">소비</option>
+          <option value="개인">개인</option>
+          <option value="기타">기타</option>
+        </select>
+        <select class="select" id="amount_select">
+          <option>금액순</option>
+          <option value="ascending">오름차순</option>
+          <option value="descending">내림차순</option>
+        </select>
+        <select class="select" id="date_select">
+          <option>날짜순</option>
+          <option value="upToDate">최신순</option>
+          <option value="downToDate">오래된순</option>
         </select>
         <ul class="spending-list"></ul>
       </section>
