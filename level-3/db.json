@@ -27,6 +27,20 @@
       "description": "가나다",
       "amount": 4343,
       "id": 5
+    },
+    {
+      "date": "2026-03-13T06:34:03.016Z",
+      "category": "생활",
+      "description": "미쯔",
+      "amount": 700,
+      "id": 6
+    },
+    {
+      "date": "2026-03-13T07:15:33.523Z",
+      "category": "이동",
+      "description": "버스비",
+      "amount": 54352,
+      "id": 7
     }
   ]
 }

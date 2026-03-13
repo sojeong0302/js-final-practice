@@ -37,12 +37,12 @@ button {
 .add-section {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 20%;
   border: 5px solid #9bd1e5;
   padding: 50px;
   background-color: white;
   border-radius: 30px;
-  height: 450px;
+  height: 500px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   gap: 10px;
   justify-content: space-between;
@@ -110,12 +110,12 @@ button {
 .list-section {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 20%;
   border: 5px solid #9bd1e5;
   padding: 50px;
   background-color: white;
   border-radius: 30px;
-  height: 450px;
+  height: 500px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   gap: 10px;
 }
@@ -128,20 +128,34 @@ button {
   border-bottom: 1px solid #6a8eae;
 }
 
-/* .badges {
+.stats-section {
   display: flex;
+  flex-direction: column;
+  width: 20%;
+  border: 5px solid #9bd1e5;
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+  height: 500px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.stats-spending {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.badge {
-  background-color: #9bd1e5;
-  color: white;
-  padding: 5px 10px 5px 10px;
-  border-radius: 50px;
-} */
-
-.badge:focus {
-  background-color: #6a8eae;
+.stats-subtitle {
+  font-weight: 550;
+  font-size: 20px;
 }
 
 .footer-container {

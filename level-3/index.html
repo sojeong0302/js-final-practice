@@ -49,10 +49,8 @@
           <option>카테고리 선택</option>
           <option value="생활">생활</option>
           <option value="이동">이동</option>
-          <option value="생활비">생활비</option>
           <option value="소비">소비</option>
           <option value="개인">개인</option>
-          <option value="기타">기타</option>
         </select>
         <select class="select" id="amount_select">
           <option>금액순</option>
@@ -66,10 +64,17 @@
         </select>
         <ul class="spending-list"></ul>
       </section>
+      <section class="stats-section">
+        <div class="title-container">
+          <p class="title">통계</p>
+        </div>
+        <ul class="stats-list"></ul>
+      </section>
     </main>
     <footer class="footer-container">
       <p class="copyright">ⓒ 2026 FS-sprint (12기) All rights reserved</p>
     </footer>
     <script type="module" src="./js/render/list.js"></script>
+    <script type="module" src="./js/render/stats.js"></script>
   </body>
 </html>
