@@ -149,12 +149,16 @@ amountSort.addEventListener("change", async function () {
 datesSort.addEventListener("change", async function () {
   const list = await totalList();
   if (datesSort.value === "upToDate") {
-    const sortList = [...list].sort((a, b) => a.amount - b.amount);
+    const sortList = [...list].sort(
+      (a, b) => new Date(a.date) - new Date(b.date),
+    );
     listRendering(sortList);
   }
 
   if (datesSort.value === "downToDate") {
-    const sortList = [...list].sort((a, b) => b.amount - a.amount);
+    const sortList = [...list].sort(
+      (a, b) => new Date(b.date) - new Date(a.date),
+    );
     listRendering(sortList);
   }
 });

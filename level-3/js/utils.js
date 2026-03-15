@@ -1,9 +1,1 @@
-export function showMessage(type, text) {
-  if (type === "success") {
-    console.log(text);
-  }
-
-  if (type === "error") {
-    console.log(text);
-  }
-}
+// 유틸리티 함수 (정렬, 통계 계산 등)

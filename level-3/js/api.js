@@ -1,4 +1,4 @@
-import { showMessage } from "./utils.js";
+import { showMessage } from "./render/ui.js";
 
 const BASIC_URL = "http://localhost:4000/expenses";
 
