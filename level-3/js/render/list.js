@@ -125,6 +125,10 @@ addSection.addEventListener("submit", function (e) {
 filterSelect.addEventListener("change", async function () {
   const list = await totalList();
 
+  if (filterSelect.value === "카테고리 선택") {
+    return listRendering(list);
+  }
+
   const filterList = list.filter(function (t) {
     return t.category === filterSelect.value;
   });
