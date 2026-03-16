@@ -10,9 +10,6 @@ const addSection = document.querySelector(".add-section");
 const categorySelect = document.querySelector("#add_select");
 const desInput = document.querySelector("#des_input");
 const amountInput = document.querySelector("#amount_input");
-const filterSelect = document.querySelector("#filter_select");
-const amountSort = document.querySelector("#amount_select");
-const datesSort = document.querySelector("#date_select");
 
 export function listRendering(list) {
   spendingList.innerHTML = "";
@@ -119,52 +116,7 @@ addSection.addEventListener("submit", function (e) {
 
   desInput.value = "";
   amountInput.value = "";
-});
-
-// 카테고리 필터링
-filterSelect.addEventListener("change", async function () {
-  const list = await totalList();
-
-  if (filterSelect.value === "카테고리 선택") {
-    return listRendering(list);
-  }
-
-  const filterList = list.filter(function (t) {
-    return t.category === filterSelect.value;
-  });
-  listRendering(filterList);
-});
-
-//금액순 정렬
-amountSort.addEventListener("change", async function () {
-  const list = await totalList();
-  if (amountSort.value === "ascending") {
-    const sortList = [...list].sort((a, b) => a.amount - b.amount);
-    listRendering(sortList);
-  }
-
-  if (amountSort.value === "descending") {
-    const sortList = [...list].sort((a, b) => b.amount - a.amount);
-    listRendering(sortList);
-  }
-});
-
-//날짜순 정렬
-datesSort.addEventListener("change", async function () {
-  const list = await totalList();
-  if (datesSort.value === "upToDate") {
-    const sortList = [...list].sort(
-      (a, b) => new Date(a.date) - new Date(b.date),
-    );
-    listRendering(sortList);
-  }
-
-  if (datesSort.value === "downToDate") {
-    const sortList = [...list].sort(
-      (a, b) => new Date(b.date) - new Date(a.date),
-    );
-    listRendering(sortList);
-  }
+  category.value = "";
 });
 
 getList();

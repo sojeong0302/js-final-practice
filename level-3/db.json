@@ -1,18 +1,39 @@
 {
   "expenses": [
     {
-      "date": "2026-03-13T09:24:08.534Z",
-      "category": "생활",
-      "description": "버스비",
-      "amount": 4000,
+      "date": "2026-03-16T01:32:08.105Z",
+      "category": "소비",
+      "description": "젤리",
+      "amount": 2500,
       "id": 1
     },
     {
-      "date": "2026-03-13T09:24:18.938Z",
-      "category": "소비",
-      "description": "초콜릿",
-      "amount": 1000,
-      "id": 2
+      "date": "2026-03-16T01:32:16.179Z",
+      "category": "이동",
+      "description": "버스비",
+      "amount": 52000,
+      "id": 3
+    },
+    {
+      "date": "2026-03-16T01:32:44.702Z",
+      "category": "개인",
+      "description": "문제집",
+      "amount": 32000,
+      "id": 5
+    },
+    {
+      "date": "2026-03-16T01:34:38.235Z",
+      "category": "생활",
+      "description": "전기세",
+      "amount": 80000,
+      "id": 7
+    },
+    {
+      "date": "2026-03-16T01:35:17.854Z",
+      "category": "이동",
+      "description": "비행기",
+      "amount": 100000,
+      "id": 8
     }
   ]
 }

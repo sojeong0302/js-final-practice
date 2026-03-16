@@ -51,7 +51,7 @@ export function statsendering(list) {
   averageSpendingTitle.textContent = "평균 합계";
   averageSpendingTitle.className = "stats-subtitle";
   const averageSpendingValue = document.createElement("P");
-  averageSpendingValue.textContent = `${totalResult / list.length}`;
+  averageSpendingValue.textContent = `${totalResult / list.length}원`;
   averageSpending.appendChild(averageSpendingTitle);
   averageSpending.appendChild(averageSpendingValue);
 
